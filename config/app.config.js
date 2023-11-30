@@ -1,7 +1,20 @@
-const REDIS_DB_CONFIG = {
-    DB: "redis-19245.c267.us-east-1-4.ec2.cloud.redislabs.com:19245"
-}
+const redis = require("redis");
+const axios = require("axios");
+const express = require("express");
+// Create a client
 
-module.exports = {
-    REDIS_DB_CONFIG
-}
+let client = redis.createClient();
+
+client.on('connect', () => {
+    console.log("Redis connection established...")
+})
+
+client.on('error', () => {
+    console.log("An error occured connecting to Redis!")
+})
+
+
+// Set Port number
+const portNumber = 8080
+
+const app = express();
