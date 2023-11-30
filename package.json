@@ -1,0 +1,12 @@
+{
+  "name": "redis-demo",
+  "version": "1.0.0",
+  "description": "Redis and NodeJS demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Aahlad Kethineedi",
+  "license": "ISC"
+}
