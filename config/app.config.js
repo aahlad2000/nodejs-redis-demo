@@ -23,3 +23,12 @@ process.on('SIGINT', async () => {
     await client.quit();
 })
 
+await client.hSet('Frameworks', {
+    "Java": "Springboot",
+    "Kotlin": "Ktor",
+    "Javascript": "Angular"
+})
+
+let getFrameworks = await client.hGetAll('Frameworks')
+
+console.log(JSON.stringify(getFrameworks))
