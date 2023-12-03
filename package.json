@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Redis and NodeJS demo",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node config/app.config.js"
   },
   "author": "Aahlad Kethineedi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redis": "7.2.0"
+  }
 }
